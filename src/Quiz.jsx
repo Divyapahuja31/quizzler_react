@@ -50,7 +50,7 @@ function Quiz() {
           </div>
         </div>
       ) : (
-        <h2>Loading Questions...</h2>
+        <h2>Loading Questions......</h2>
       )}
     </div>
   );
