@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Quiz from "./Quiz";
-import "./index.css"; // Import CSS for styling
+import "./index.css";
 
 function App() {
   return (
