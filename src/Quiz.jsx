@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import allQuestions from "./questions"; // Import 100 questions
+import allQuestions from "./questions";
 
 function Quiz() {
   const [selectedQuestions, setSelectedQuestions] = useState([]);
@@ -10,7 +10,7 @@ function Quiz() {
 
   useEffect(() => {
     const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-    setSelectedQuestions(shuffled.slice(0, 20)); // Pick 20 random questions
+    setSelectedQuestions(shuffled.slice(0, 20)); 
   }, []);
 
   const handleAnswer = (option) => {
