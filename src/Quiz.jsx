@@ -7,7 +7,6 @@ function Quiz() {
   const navigate = useNavigate();
   const numQuestions = location.state?.numQuestions;
 
-  // Redirect if user tries to access quiz without setting numQuestions
   useEffect(() => {
     if (!numQuestions) {
       navigate("/");
@@ -20,7 +19,6 @@ function Quiz() {
   const [showScore, setShowScore] = useState(false);
   const [timeLeft, setTimeLeft] = useState(60);
 
-  // Randomly select questions
   useEffect(() => {
     if (numQuestions) {
       const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
@@ -28,7 +26,6 @@ function Quiz() {
     }
   }, [numQuestions]);
 
-  // Timer Countdown
   useEffect(() => {
     if (timeLeft === 0) {
       setShowScore(true);
@@ -39,7 +36,6 @@ function Quiz() {
     return () => clearInterval(timer);
   }, [timeLeft]);
 
-  // Handle Answer Selection
   const handleAnswer = (option) => {
     if (option === selectedQuestions[currentQuestion].answer) {
       setScore((prev) => prev + 1);

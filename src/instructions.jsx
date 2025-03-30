@@ -6,7 +6,6 @@ function Instructions() {
   const navigate = useNavigate();
   const numQuestions = location.state?.numQuestions;
 
-  // Redirect if user comes directly to this page
   useEffect(() => {
     if (!numQuestions) {
       navigate("/");

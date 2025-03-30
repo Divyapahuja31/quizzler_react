@@ -74,7 +74,6 @@ const questions = [
   { question: "What is the purpose of the `key` attribute in lists?", options: ["To improve performance", "To sort elements", "To add styles", "To change the DOM"], answer: "To improve performance" },
   { question: "Which React hook is used for performance optimization?", options: ["useMemo", "useEffect", "useState", "useRef"], answer: "useMemo" },
   
-  // (Include all other questions in a similar format from HTML, CSS, and JavaScript categories)
 
 ];
 export default questions;
